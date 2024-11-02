@@ -1,7 +1,7 @@
 # Digital Rain Innovation
 
 ## Repository
-<Link https://github.com/HyunbinOh046/Final_Project.git>
+<https://github.com/HyunbinOh046/Final_Project.git>
 
 ## Description
 - Innovating the digital rain project to create more authentic and artistic screen saver. 
