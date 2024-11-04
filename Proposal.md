@@ -18,9 +18,9 @@
 
 ## Outcomes
 Ideal Outcome: 
-- 
+- The ideal outcome would be a digital rain with a random background color and a left mouse function to change it. 
 Minimal Viable Outcome: 
-- 
+- At least I can produce one of the features that would be the minimal viable outcome for this project. 
 
 ## Milestones
 - Week 1
