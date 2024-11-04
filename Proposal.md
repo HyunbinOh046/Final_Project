@@ -19,7 +19,8 @@
 ## Outcomes
 Ideal Outcome: 
 - The ideal outcome would be a digital rain with a random background color and a left mouse function to change it. And
-  the movement of particles should be presented. 
+  the movement of particles should be presented.
+  
 Minimal Viable Outcome: 
 - At least I can produce one of the features that would be the minimal viable outcome for this project. 
 
