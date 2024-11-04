@@ -4,17 +4,17 @@
 <https://github.com/HyunbinOh046/Final_Project.git>
 
 ## Description
-- Innovating the digital rain project to create more authentic and artistic screen saver. 
+- This project will modify the digital rain python code to create an authentic and artistic screen saver that inspires artists. 
 
 ## Features
-- Feature 1
-- Feature 2
-- Feature 3
+- Random colors for the initial shapes and following trails.
+- Left mouse click to transform the background color. 
+- 
 
 ## Challenges 
--
--
--
+- Setting up random colors for the particles. 
+- Setting up the left mouse clicking function. 
+- 
 
 ## Outcomes
 Ideal Outcome: 
