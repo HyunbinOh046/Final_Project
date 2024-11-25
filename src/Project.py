@@ -4,21 +4,42 @@ from turtle import Turtle, Screen
 screen = Screen()
 t = Turtle("turtle")
 t.speed(-1)
+t.shapesize(2,2,2)
 
-pen = turtle.Turtle()
-pen.hideturtle()
-pen.fillcolor("blue")
-pen.begin_fill()
+#Blue Color Button
+def blue_button():
+    pen = turtle.Turtle()
+    pen.hideturtle()
+    pen.fillcolor("blue")
+    pen.begin_fill()
 
-for i in range(2):
-    pen.forward(80)
-    pen.left(90)
-    pen.forward(30)
-    pen.left(90)
+    for i in range(2):
+        pen.forward(80)
+        pen.left(90)
+        pen.forward(30)
+        pen.left(90)
 
-pen.penup()
-pen.goto(7,6)
-pen.end_fill()
+    pen.penup()
+    pen.goto(7,6)
+    pen.end_fill()
+
+#Red Color Button
+def red_button():
+    pen = turtle.Turtle()
+    pen.hideturtle()
+    pen.fillcolor("red")
+    pen.begin_fill()
+
+    for i in range(2):
+        pen.forward(80)
+        pen.left(90)
+        pen.forward(30)
+        pen.left(90)
+
+    pen.penup()
+    pen.goto(7,6)
+    pen.end_fill()
+
 
 def dragging(x, y):
     t.ondrag(None)
@@ -29,6 +50,7 @@ def dragging(x, y):
 
 def clickright(x, y):
     t.clear()
+    t.pencolor('black')
 
 # Button to change color
 def color_bt(x, y):
@@ -41,6 +63,8 @@ def color_bt(x, y):
 def main():
     turtle.listen()
     t.ondrag(dragging)
+    blue_button()
+    red_button()
     turtle.onscreenclick(clickright, 3)
     turtle.onscreenclick(color_bt, 1)
     screen.mainloop()
