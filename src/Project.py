@@ -7,6 +7,18 @@ t.speed(-1)
 
 pen = turtle.Turtle()
 pen.hideturtle()
+pen.fillcolor("blue")
+pen.begin_fill()
+
+for i in range(2):
+    pen.forward(80)
+    pen.left(90)
+    pen.forward(30)
+    pen.left(90)
+
+pen.penup()
+pen.goto(7,6)
+pen.end_fill()
 
 def dragging(x, y):
     t.ondrag(None)
@@ -19,22 +31,18 @@ def clickright(x, y):
     t.clear()
 
 # Button to change color
-def color_bt():
-    for i in range(2):
-        pen.forward(80)
-        pen.left(90)
-        pen.forward(30)
-        pen.left(90)
+def color_bt(x, y):
+    if x > 0 and x < 81 and y > 0 and y < 30:
+        t.pencolor("blue")
+
 
 # Button to change width of pen
 
 def main():
     turtle.listen()
-
     t.ondrag(dragging)
-
     turtle.onscreenclick(clickright, 3)
-
+    turtle.onscreenclick(color_bt, 1)
     screen.mainloop()
 
 main()
