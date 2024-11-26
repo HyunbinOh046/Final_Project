@@ -61,7 +61,19 @@ class slider(Turtle):
 
     def drag(self, x, y):
         if (y<=120 and y >= -120):
-            self.sety(y) 
+            self.sety(y)
+        if (y > -120 and y < -80):
+            t.pensize(1) 
+        elif (y > -80 and y < -40):
+            t.pensize(2)
+        elif (y > -40 and y < 0):
+            t.pensize(3)
+        elif (y > 0 and y < 40):
+            t.pensize(4)
+        elif (y > 40 and y < 80):
+            t.pensize(5)
+        else:
+            t.pensize(6) 
 
 
 # Turtle to draw
@@ -75,6 +87,7 @@ def dragging(x, y):
 def clickright(x, y):
     t.clear()
     t.pencolor('black')
+    t.pensize(1)
 
 # Button to change color
 def color_bt(x, y):
