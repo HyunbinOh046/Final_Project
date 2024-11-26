@@ -13,6 +13,10 @@ def buttons():
     pen.fillcolor("blue")
     pen.begin_fill()
 
+    pen.up()
+    pen.forward(260)
+    pen.down()
+
     for i in range(2):
         pen.forward(80)
         pen.left(90)
@@ -20,11 +24,11 @@ def buttons():
         pen.left(90)
 
     pen.penup()
-    pen.goto(7,6)
+    pen.goto(1,1)
     pen.end_fill()
     
     pen.penup
-    pen.forward(100)
+    pen.forward(350)
     pen.pendown
 
     #Red Color Button
@@ -38,7 +42,7 @@ def buttons():
         pen.left(90)
 
     pen.penup()
-    pen.goto(7,6)
+    pen.goto(0,0)
     pen.end_fill()
 
 class slider(Turtle):
@@ -50,6 +54,15 @@ class slider(Turtle):
         self.speed(0)
         self.up()
         self.color(c)
+        self.goto(x, -120)
+        self.down()
+        self.goto(x, 120)
+        self.ondrag(self.drag)
+
+    def drag(self, x, y):
+        if (y<=120 and y >= -120):
+            self.sety(y) 
+
 
 # Turtle to draw
 def dragging(x, y):
@@ -65,9 +78,9 @@ def clickright(x, y):
 
 # Button to change color
 def color_bt(x, y):
-    if x > 0 and x < 81 and y > 0 and y < 30:
+    if x > 260 and x < 340 and y > 0 and y < 30:
         t.pencolor("blue")
-    if x > 100 and x < 180 and y > 0 and y < 30:
+    if x > 350 and x < 430 and y > 0 and y < 30:
         t.pencolor("red")
 
 
@@ -75,6 +88,7 @@ def main():
     turtle.listen()
     t.ondrag(dragging)
     buttons()
+    slider(600, 0, 'black')
     turtle.onscreenclick(clickright, 3)
     turtle.onscreenclick(color_bt, 1)
     screen.mainloop()
