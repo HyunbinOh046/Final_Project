@@ -7,7 +7,7 @@ t.speed(-1)
 t.shapesize(2,2,2)
 
 #Blue Color Button
-def blue_button():
+def button():
     pen = turtle.Turtle()
     pen.hideturtle()
     pen.fillcolor("blue")
@@ -23,8 +23,7 @@ def blue_button():
     pen.goto(7,6)
     pen.end_fill()
 
-#Red Color Button
-def red_button():
+    #Red Color Button
     pen = turtle.Turtle()
     pen.hideturtle()
     pen.fillcolor("red")
@@ -63,8 +62,7 @@ def color_bt(x, y):
 def main():
     turtle.listen()
     t.ondrag(dragging)
-    blue_button()
-    red_button()
+    button()
     turtle.onscreenclick(clickright, 3)
     turtle.onscreenclick(color_bt, 1)
     screen.mainloop()
