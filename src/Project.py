@@ -22,10 +22,11 @@ def button():
     pen.penup()
     pen.goto(7,6)
     pen.end_fill()
-
+    
+    pen.penup
+    pen.forward(100)
+    pen.pendown
     #Red Color Button
-    pen = turtle.Turtle()
-    pen.hideturtle()
     pen.fillcolor("red")
     pen.begin_fill()
 
@@ -55,6 +56,8 @@ def clickright(x, y):
 def color_bt(x, y):
     if x > 0 and x < 81 and y > 0 and y < 30:
         t.pencolor("blue")
+    if x > 100 and x < 180 and y > 0 and y < 30:
+        t.pencolor("red")
 
 
 # Button to change width of pen
