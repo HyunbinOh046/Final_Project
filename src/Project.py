@@ -6,8 +6,8 @@ t = Turtle("turtle")
 t.speed(-1)
 t.shapesize(2,2,2)
 
-#Blue Color Button
-def button():
+# Drawing Buttons
+def buttons():
     pen = turtle.Turtle()
     pen.hideturtle()
     pen.fillcolor("blue")
@@ -26,6 +26,7 @@ def button():
     pen.penup
     pen.forward(100)
     pen.pendown
+
     #Red Color Button
     pen.fillcolor("red")
     pen.begin_fill()
@@ -40,14 +41,24 @@ def button():
     pen.goto(7,6)
     pen.end_fill()
 
+class slider(Turtle):
+    def __init__(self, x, y, c):
+        Turtle.__init__(self)
+        self.shape('square')
+        self.shapesize(2,2,2)
+        self.pensize(10)
+        self.speed(0)
+        self.up()
+        self.color(c)
 
+# Turtle to draw
 def dragging(x, y):
     t.ondrag(None)
     t.setheading(t.towards(x, y))
     t.goto(x, y)
     t.ondrag(dragging)
 
-
+# Reset the color
 def clickright(x, y):
     t.clear()
     t.pencolor('black')
@@ -60,12 +71,10 @@ def color_bt(x, y):
         t.pencolor("red")
 
 
-# Button to change width of pen
-
 def main():
     turtle.listen()
     t.ondrag(dragging)
-    button()
+    buttons()
     turtle.onscreenclick(clickright, 3)
     turtle.onscreenclick(color_bt, 1)
     screen.mainloop()
