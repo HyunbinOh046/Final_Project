@@ -140,6 +140,10 @@ def color_bt(x, y):
         t.pencolor("blue")
     if x > 350 and x < 430 and y > 0 and y < 30:
         t.pencolor("red")
+    if x > 260 and x < 340 and y > -40 and y < 0:
+        t.pencolor("green")
+    if x > 350 and x < 430 and y > -40 and y < 0:
+        t.pencolor("yellow")
 
 
 def main():
