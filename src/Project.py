@@ -10,6 +10,8 @@ t.shapesize(2,2,2)
 def buttons():
     pen = turtle.Turtle()
     pen.hideturtle()
+
+    #Blue color button
     pen.fillcolor("blue")
     pen.begin_fill()
 
@@ -44,6 +46,49 @@ def buttons():
     pen.penup()
     pen.goto(0,0)
     pen.end_fill()
+
+    pen.penup
+    pen.forward(260)
+    pen.right(90)
+    pen.forward(40)
+    pen.left(90)
+    pen.pendown
+
+    # Green Color button
+    pen.fillcolor('green')
+    pen.begin_fill()
+
+    for i in range(2):
+        pen.forward(80)
+        pen.left(90)
+        pen.forward(30)
+        pen.left(90)
+
+    pen.penup()
+    pen.goto(0,0)
+    pen.end_fill()
+
+    # Yellow Color Buton
+    pen.penup
+    pen.forward(350)
+    pen.right(90)
+    pen.forward(40)
+    pen.left(90)
+    pen.pendown
+
+    pen.fillcolor('yellow')
+    pen.begin_fill()
+
+    for i in range(2):
+        pen.forward(80)
+        pen.left(90)
+        pen.forward(30)
+        pen.left(90)
+    
+    pen.penup()
+    pen.goto(0,0)
+    pen.end_fill()
+
 
 class slider(Turtle):
     def __init__(self, x, y, c):
@@ -83,7 +128,7 @@ def dragging(x, y):
     t.goto(x, y)
     t.ondrag(dragging)
 
-# Reset the color
+# Reset the color and pensize
 def clickright(x, y):
     t.clear()
     t.pencolor('black')
