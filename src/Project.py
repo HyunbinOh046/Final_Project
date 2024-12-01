@@ -89,7 +89,7 @@ def buttons():
     pen.goto(0,0)
     pen.end_fill()
 
-
+# Pen Width Slider
 class slider(Turtle):
     def __init__(self, x, y, c):
         Turtle.__init__(self)
@@ -119,7 +119,6 @@ class slider(Turtle):
             t.pensize(5)
         else:
             t.pensize(6) 
-
 
 # Turtle to draw
 def dragging(x, y):
