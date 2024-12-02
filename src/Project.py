@@ -154,4 +154,6 @@ def main():
     turtle.onscreenclick(color_bt, 1)
     screen.mainloop()
 
-main()
+
+if __name__ == "__main__":
+    main()
